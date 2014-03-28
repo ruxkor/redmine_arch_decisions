@@ -24,13 +24,13 @@ class ArchDecisionsController < ApplicationController
     end
 
     @arch_decision_count = ArchDecision.count(:conditions => c)
-    @arch_decision_pages = Paginator.new self, @arch_decision_count,
+    @arch_decision_pages = Paginator.new @arch_decision_count,
                 per_page_option,
                 params['page']
     @arch_decisions = ArchDecision.find :all, :order => sort_clause,
                         :conditions => c,
-            :limit  =>  @arch_decision_pages.items_per_page,
-            :offset =>  @arch_decision_pages.current.offset
+            :limit  =>  @arch_decision_pages.per_page,
+            :offset =>  @arch_decision_pages.offset
 
     render :action => "index", :layout => false if request.xhr?
   end

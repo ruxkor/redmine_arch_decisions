@@ -23,7 +23,7 @@ class ArchDecisionDiscussionsController < ApplicationController
       @discussion.created_by = User.current
       if @discussion.save
         save_attachments
-        ArchDecisionsMailer.deliver_arch_decision_discussion_add(@discussion)
+        ArchDecisionsMailer.arch_decision_discussion_add(@discussion).deliver
         flash[:notice] = l(:notice_successful_create)
       else
         flash[:error] = @discussion.errors.empty? ? l(:notice_create_discussion_failed) : @discussion.errors.full_messages.join("<br/>")

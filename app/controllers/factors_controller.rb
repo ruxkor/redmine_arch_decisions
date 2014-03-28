@@ -54,13 +54,13 @@ class FactorsController < ApplicationController
     conditions = [query.join(" AND ")] + values
 
     @factor_count = Factor.count(:conditions => conditions)
-    @factor_pages = Paginator.new self, @factor_count,
+    @factor_pages = Paginator.new @factor_count,
                 per_page_option,
                 params['page']
     @factors = Factor.find :all, :order => sort_clause,
                         :conditions => conditions,
-            :limit  =>  @factor_pages.items_per_page,
-            :offset =>  @factor_pages.current.offset
+            :limit  =>  @factor_pages.per_page,
+            :offset =>  @factor_pages.offset
 
     if params[:mode] == 'popup'
       render :layout => 'popup'
