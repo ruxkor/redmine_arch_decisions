@@ -1,3 +1,0 @@
-= arch_decisions
-
-Description goes here
