@@ -33,7 +33,7 @@
         <h1>
 <a name="arch-decisions" class="anchor" href="#arch-decisions"><span class="octicon octicon-link"></span></a>Arch Decisions</h1>
 
-<p>IMG Listing of Arch Decisions</p>
+<img src="images/arch-decisions.png" title="Listing of Arch Decisions`" alt="Listing of Arch Decisions`" />
 
 <p>The plugin includes a listing of the Arch Decisions themselves, which are currently limited to the scope of a single project. The ADs have an ID, a status, a summary, and a “Problem Description” field for more detailed information on the context of the decision. ADs currently follow a very simple workflow that isn't being enforced, but is still useful:</p>
 
@@ -47,14 +47,17 @@
 <li>Deprecated (implies that there's another AD out there somewhere to replace it)</li>
 </ol><p>Arch Decisions also have a text field called “Resolution” that should be filled out when the status is changed to “Decision Made”. The resolution should explain what the final decision was, summarize why that decision was made, and provide any additional guidance to any developers who will be making sure the AD gets implemented.</p>
 
-<p>IMG Basic information for an Arch Decision
+<img src="images/arch-decision.png" title="Basic information for an Arch Decision" alt="Basic information for an Arch Decision" />
+
+<p>
 In addition to those basic text fields, there are also important supplemental elements embedded within the decisions that play an important role in the documentation and decision-making process (note that these are a new feature that I didn't have in the old Quickbase version):</p>
 
 <h2>
 <a name="factors" class="anchor" href="#factors"><span class="octicon octicon-link"></span></a>Factors</h2>
 
-<p>Factors associated with an AD
-One of the most important benefits of tracking technical decisions in this way is the possibility of making all decision points and trade offs explicit. There are so many reasons why this is important :</p>
+<img src="images/factors.png" title="Factors associated with an AD" alt="Factors associated with an AD" />
+
+<p>One of the most important benefits of tracking technical decisions in this way is the possibility of making all decision points and trade offs explicit. There are so many reasons why this is important :</p>
 
 <ul>
 <li>You can see on one place all the reasons for which a decision was made</li>
@@ -72,7 +75,7 @@ One of the most important benefits of tracking technical decisions in this way i
 <h2>
 <a name="strategies" class="anchor" href="#strategies"><span class="octicon octicon-link"></span></a>Strategies</h2>
 
-<p>IMG Strategies for an AD</p>
+<img src="images/strategies.png" title="Strategies for an AD" alt="Strategies for an AD" />
 
 <p>What's a decision without options to choose from? As with factors, my experience has been that people are good at tossing out ideas, but less good at remembering what they were later on. Or understanding anyone's ideas but their own. So the RAD plugin also separates out a section just to track what those alternatives were that everyone proposed. Each one has a “short name”, which can be useful as reference (a little better than “wait, are you talking about the one where command comes in as a message which is then republished, or the one where you stick the command in the database and then you have a periodic task to look them up?”), plus a sightly longer summary. Then there is a detailed description for what that stratesugy would really entail.</p>
 
@@ -83,7 +86,7 @@ One of the most important benefits of tracking technical decisions in this way i
 <h2>
 <a name="tracking" class="anchor" href="#tracking"><span class="octicon octicon-link"></span></a>Tracking</h2>
 
-<p>IMG An Issue with two related ADs</p>
+<img src="images/issue.png" title="An Issue with two related ADs" alt="An Issue with two related ADs" />
 
 <p>With this release, ADs can finally be associated with Redmine Issues. This is very important for tracking and governance (making sure the decision gets carried out, and that it is still followed in later implementations. It's also true that during the course of making a decision, work has to be done on the side. Thus, the association between ADs and issues includes the “type” of relationship that an Issue bears to the AD:</p>
 
@@ -109,9 +112,9 @@ One of the most important benefits of tracking technical decisions in this way i
 <p>I've got more tips and details to discuss about the plugin, so I'll try to get around to that as soon as possible. Until then, let me know if you have any feedback, and I really wish you the best in your future decisions!</p>
 
 <p><em>Original Source: <a href="http://timhigh.wordpress.com/2010/02/23/announcing-the-arch-decisions-plugin-for-redmine">http://timhigh.wordpress.com/2010/02/23/announcing-the-arch-decisions-plugin-for-redmine</a></em></p>
+
       </section>
       <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
