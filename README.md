@@ -4,6 +4,8 @@ The purpose of the Arch Decision plugin for Redmine is to allow teams to collabo
 to encourage explicit statements of assumptions and prioritizations, and to provide tracking after the decision has been made so that
 teams can have a collective memory as to how decisions were made in the past.
 
+Please check out the [github page](http://ruxkor.github.io/redmine_arch_decisions/) for a more thorough introduction.
+
 # CURRENT FEATURES
 
 * List Arch Decisions (currently only manually, via the /arch_decisions URL)
